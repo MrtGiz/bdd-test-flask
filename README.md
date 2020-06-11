@@ -11,7 +11,7 @@ $ virtualenv venv
 $ source venv/bin/activate
 
 # Клонирование репозитория
-$ git clone https://github.com/X1Zeth2X/flask-restx-boilerplate.git
+$ git clone https://github.com/MrtGiz/bdd-test-flask.git
 
 # Установка зависимостей
 $ pip install requirements.txt
