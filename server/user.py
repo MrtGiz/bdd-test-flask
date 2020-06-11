@@ -29,10 +29,7 @@ class Users(Resource):
         users = list()
         db = sqlite3.connect('db.sqlite')
         c = db.cursor()
-        # c.execute("select distinct id, name from appuser")
         c.execute("select * from appuser")
-        # print('rows:', c.rowcount)
-        # print(c.fetchall())
 
         for user_id, name in c:
             users.append(dict(id=user_id, name=name))
@@ -45,7 +42,6 @@ class Users(Resource):
         db = sqlite3.connect('db.sqlite')
         c = db.cursor()
         user_id = self.max_id() + 1
-        print('new user id:', user_id)
         c.execute("INSERT INTO appuser VALUES (?, ?)", (user_id, args['name']))
         db.commit()
         return user_id, 201
