@@ -12,9 +12,10 @@ $ source venv/bin/activate
 
 # Клонирование репозитория
 $ git clone https://github.com/MrtGiz/bdd-test-flask.git
+$ cd bdd-test-flask
 
 # Установка зависимостей
-$ pip install requirements.txt
+$ pip install -r requirements.txt
 
 # Запуск проекта
 $ python3 run.py
